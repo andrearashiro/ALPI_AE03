@@ -8,7 +8,7 @@ Algoritmo sistemaGados
 
         Para j de 1 até 42 passo 1 faça
 
-            Se ((numeroGado = matrizGado[j])
+            Se ((numeroGado = matrizGado[j]) então
 
                 Escreva("O código do gado já foi digitado!")
 
@@ -36,7 +36,7 @@ Início
 
             Leia(numberGado)
 
-            Se ((numberGado MOD 2) = 0)
+            Se ((numberGado MOD 2) = 0) então
                 //Sub-rotina para verificar se o número foi digitado
 
                 existeGado(numberGado, gadoPar)
@@ -45,7 +45,7 @@ Início
                 Escreva ("O gado de número:", numberGado, "vai para o pasto par)
 
                 gadoPar[par] <- numberGado
-                par = par + 1
+                par <- par + 1
 
             Senão
                 existeGado(numberGado, gadoImpar)
@@ -53,21 +53,23 @@ Início
                 Escreva ("O gado de número:", numberGado, "vai para o pasto ímpar)
 
                 gadoImpar[impar] <- numberGado
-                impar = impar + 1
+                impar <- impar + 1
 
             Fim_se
 
         Fim_para
 
-        Escreva ("A quantidade de gado no pasto par é:")
-
+            Escreval ("A quantidade de gado no pasto par é:", gadoPar)
+            Escreval ("Os gados no pasto par são:")
+            
             Para i de 1 até par passo 1 faça
 
                 Escreva(gadoPar[i], "-" )    
 
             Fim_para
 
-            Escreva ("A quantidade de gado no pasto impar é:")
+            Escreval ("A quantidade de gado no pasto impar é:", gadoImpar)
+            Escreval ("Os gados no pasto ímpar são:")
 
             Para i de 1 até impar passo 1 faça
 
