@@ -1,0 +1,78 @@
+Algoritmo sistemaGados
+
+    //Criando uma sub-rotina para verificar se o número foi digitado
+    
+    Procedimento existeGado(numeroGado, matriz[1..42]: inteiro)
+    
+    Inicio
+
+        Para j de 1 até 42 passo 1 faça
+
+            Se ((numeroGado = matrizGado[i])
+
+                Escreva("O código do gado já foi digitado!")
+
+            Fim_se
+        Fim_para
+    Fim_procedimento    
+        
+Var
+
+    par, impar, i, numberGado: inteiro
+    gadoPar: Vetor[1..42] de inteiro
+    gadoImpar: Vetor[1..42] de inteiro
+
+//As variáveis - vetores - são em referência a cada tipo de pasto, para gado par e para gado ímpar.
+
+Início
+    par <- 1
+    impar <- 1
+
+    Escreva("Sistema de contagem de gados!")
+
+    Escreva("Por favor, digite abaixo o número do gado:")
+
+        Para i de 1 até 42 passo 1 faça
+
+            Leia(numberGado)
+
+            Se ((numberGado MOD 2) = 0)
+                //Sub-rotina para verificar se o número foi digitado
+
+                existeGado(numberGado, gadoPar)
+
+
+                Escreva ("O gado de número:", numberGado, "vai para o pasto par)
+
+                gadoPar[par] <- numberGado
+                par = par + 1
+
+            Senão
+                existeGado(numberGado, gadoImpar)
+
+                Escreva ("O gado de número:", numberGado, "vai para o pasto ímpar)
+
+                gadoImpar[impar] <- numberGado
+                impar = impar + 1
+
+            Fim_se
+
+        Fim_para
+
+        Escreva ("A quantidade de gado no pasto par é:")
+
+            Para i de 1 até par passo 1 faça
+
+                Escreva(gadoPar[i], "-" )    
+
+            Fim_para
+
+            Escreva ("A quantidade de gado no pasto impar é:")
+
+            Para i de 1 até impar passo 1 faça
+
+                Escreva(gadoImpar[i], "-" )    
+
+            Fim_para    
+
+Fim
