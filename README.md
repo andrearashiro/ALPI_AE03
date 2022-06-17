@@ -10,4 +10,6 @@ Atividades:
 Sub rotina
 - Verificar se o número já foi digitado.
 
+A atividade não foi testada no VisualG, confeccionei um código em C para testar.
+
 
