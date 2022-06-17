@@ -8,7 +8,7 @@ Algoritmo sistemaGados
 
         Para j de 1 até 42 passo 1 faça
 
-            Se ((numeroGado = matrizGado[i])
+            Se ((numeroGado = matrizGado[j])
 
                 Escreva("O código do gado já foi digitado!")
 
